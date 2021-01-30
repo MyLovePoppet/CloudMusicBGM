@@ -118,7 +118,6 @@ JNIEXPORT jdouble JNICALL Java_CloudMusicUtils_getCurrentPosition
 	double position;
 	SIZE_T outNum;
 	ReadProcessMemory(processHandle, (LPCVOID)offsetAddress, (LPVOID)(&position), 8, &outNum);
-	CloseHandle(processHandle);
 	return position;
 }
 
