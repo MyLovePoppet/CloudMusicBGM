@@ -5,8 +5,19 @@ public class Main {
             CloudMusicUtils.nativeGc();
             return;
         }
-        System.out.println(CloudMusicUtils.getCloudMusicTitle());
-        System.out.println(CloudMusicUtils.getCurrentPosition());
+        //test
+        for (int i = 0; i < 10; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            CloudMusicUtils.updateData();
+            String title = CloudMusicUtils.getCurrentMusicTitle();
+            double position = CloudMusicUtils.getCurrentMusicPosition();
+            String lyric = CloudMusicUtils.getCurrentLyric();
+            System.out.println(title + "\t" + position + "\t" + lyric);
+        }
         CloudMusicUtils.nativeGc();
     }
 }
