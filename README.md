@@ -1,3 +1,6 @@
+项目合并到https://github.com/MyLovePoppet/BGM-plugin
+
+
 网易云音乐版本：2.5.2
 
 由于网易云音乐是x86版本，所以JNI需使用x86编译成dll，并使用x86版本的jdk来运行。
